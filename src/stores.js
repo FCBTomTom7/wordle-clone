@@ -24,6 +24,11 @@ async function createWordStore() {
     }
 }
 
-export const word = await createWordStore();
+let w;
+async function exp() {
+    word = await createWordStore();
+}
+exp(); 
+export let word = w;
 export const playing = writable(true);
 export const won = writable(false);
